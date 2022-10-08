@@ -1,0 +1,174 @@
+
+/* Create Page */
+.heading{
+  margin-left: 300px;
+  color: #ffffff;
+
+}
+.bb
+{
+
+  font-family: 'Bona Nova';
+  font-size: 22px;
+  background-color: #000000;
+}
+.textarea1
+{
+  margin-top: 30px;
+  margin-left: 300px;
+  font-size: 20px;
+  height: 500px;
+  width: 650px;
+
+}
+.create
+{
+
+background-color:#ffffff;
+font-family: 'Bona Nova';
+height: 35px;
+width: 400px;
+font-size:16px;
+margin-left: 300px;
+
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #263252;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+/* ---------------------------------------------------------- */
+
+/* Login Page */
+
+.bodylogin {
+  font-family: 'Bona Nova';font-size: 22px;
+    background-color: #9EF5F5;
+    font-family: 'Bona Nova';font-size: 22px;
+      background-image: url('images/compute-ea4c57a4.png');
+}
+
+  .container
+{
+margin-left: 400px;
+margin-top:140px;
+width: 500px;
+height: 400px;
+padding-left: 100px;
+padding-top: 50px;
+background-color: white;
+
+}
+
+
+.hfont{
+font-family: 'Bona Nova';font-size: 22px;
+
+margin-left: 100px;
+}
+
+#firstname
+{
+font-size:16px;
+height: 35px;
+font-family: 'Bona Nova';
+border-radius: 1;
+}
+.signupbutton
+{
+background-color:#ffffff;
+font-family: 'Bona Nova';
+  height: 35px;
+  width: 400px;
+  font-size:16px;
+
+
+}
+
+.tab{
+margin-left: 70px;
+}
+/* -------------------------------------------------------- */
+/* Registration Page */
+.bodyregister {
+  font-family: 'Bona Nova';font-size: 22px;
+    background-image: url('images/compute-ea4c57a4.png');
+
+}
+
+  .container1
+{
+
+margin-left: 400px;
+margin-top:110px;
+width: 500px;
+height: 500px;
+padding-left: 100px;
+padding-top: 50px;
+background-color: white;
+
+
+}
+
+.hfont{
+font-family: 'Bona Nova';font-size: 22px;
+
+margin-left: 100px;
+}
+
+#firstname
+{
+font-size:16px;
+height: 35px;
+font-family: 'Bona Nova';
+border-radius: 1;
+}
+.signupbutton
+{
+background-color:#ffffff;
+ /* #ACCDF0; */
+font-family: 'Bona Nova';
+  height: 35px;
+  width: 400px;
+  font-size:16px;
+
+
+}
+
+.tab{
+margin-left: 70px;
+}
+/* --------------------------------------------------------------------- */
+.flex-box{
+  margin-top: 50px;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: space-evenly;
+}
+
+.flex-box > div{
+  color: white;
+  max-width: 500px;
+}
