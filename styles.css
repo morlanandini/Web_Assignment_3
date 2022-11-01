@@ -93,6 +93,30 @@ height: 35px;
 font-family: 'Bona Nova';
 border-radius: 1;
 }
+
+#lastname
+{
+font-size:16px;
+height: 35px;
+font-family: 'Bona Nova';
+border-radius: 1;
+}
+
+#email
+{
+font-size:16px;
+height: 35px;
+font-family: 'Bona Nova';
+border-radius: 1;
+}
+
+#password
+{
+font-size:16px;
+height: 35px;
+font-family: 'Bona Nova';
+border-radius: 1;
+}
 .signupbutton
 {
 background-color:#ffffff;
@@ -135,13 +159,36 @@ font-family: 'Bona Nova';font-size: 22px;
 margin-left: 100px;
 }
 
-#firstname
+
+
+/* #firstname
+{
+font-size:16px;
+height: 35px;
+font-family: 'Bona Nova';
+border-radius: 1;
+} */
+/* #lastname
 {
 font-size:16px;
 height: 35px;
 font-family: 'Bona Nova';
 border-radius: 1;
 }
+#email
+{
+font-size:16px;
+height: 35px;
+font-family: 'Bona Nova';
+border-radius: 1;
+}
+#password
+{
+font-size:16px;
+height: 35px;
+font-family: 'Bona Nova';
+border-radius: 1;
+} */
 .signupbutton
 {
 background-color:#ffffff;

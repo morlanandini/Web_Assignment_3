@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <head>
   <link href='https://fonts.googleapis.com/css?family=Bona Nova' rel='stylesheet'>
   <link rel="stylesheet" href="styles.css">
@@ -20,19 +20,19 @@
 
 
   <h3>Good to see you again</h3>
-  <form class="forms" action="note.html" method="post">
-        <input type="email" name="" value="" placeholder="Your Email" size=50 id="firstname" required>
+  <form class="forms" action="note.html" method="post" id="loginform">
+        <input type="email" name="" value="" placeholder="Your Email" size=50 id="email" required>
 
         <br>
         <br>
 
-        <input type="password" name="" value="" placeholder="Password" size=50 id="firstname" required>
+        <input type="password" name="" value="" placeholder="Password" size=50 id="password" required>
 
         <br>
         <br>
 
 
-    <input type="submit" name="" value="Sign In" size=150 class="signupbutton">
+    <input type="submit" name="" value="Sign In" size=150 class="signupbutton" id="submit">
 
     <br>
     <br>
@@ -50,6 +50,7 @@
   </form>
   </div>
 </section>
+<script src="myscript.js" charset="utf-8"></script>
 
 </body>
 
