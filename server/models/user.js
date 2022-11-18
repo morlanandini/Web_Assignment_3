@@ -9,15 +9,15 @@ const users = [
   {
     UserId: 101,
     EmailId: 'morlan1@newpaltz.edu',
-    firstName: 'Nandini',
-    lastName: 'M',
+    firstName: 'Cool',
+    lastName: 'Kid',
     password: '1234',
   },
   {
     UserId: 102,
-    EmailId: 'ganeshvarma2000@gmail.com',
-    firstName: 'Ganesh',
-    lastName: 'Varma',
+    EmailId: 'iamnandini@gmail.com',
+    firstName: 'Nandu',
+    lastName: 'Princess',
     password: '12345',
   },
 
