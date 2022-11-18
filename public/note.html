@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
   <head>
     <link href='https://fonts.googleapis.com/css?family=Bona Nova' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
   </head>
@@ -16,11 +15,32 @@
 </ul>
   <br>
   <h3  class="heading">Create Your Note Here</h3>
+  <!-- <div id="calculation" style="color:white"></div> -->
+  <table id="calculation" style="color:white" border="1px">
+  <th>
+    <tr>
+      <td>UserId</td>
+      <td>emailId</td>
+      <td>NoteId</td>
+      <td>Content</td>
+    </tr>
+  </th>
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+
+  </tr>
+  </table>
+
+
   <form class="" action="" method="post" id=noteform>
 
     <textarea type="text" class="textarea1"  placeholder="Start writing here..." id="notetext" ></textarea>
     <br><br>
     <input type="submit" name="" size="150" class="create" value="Create Note" onclick="alert('Note Created Sucessfully')">
+    <button type="button" name="button" id='note-button' size="150" class="create">Get notes </button>
+
   </form>
 
 <script type="text/javascript" src="myscript.js">

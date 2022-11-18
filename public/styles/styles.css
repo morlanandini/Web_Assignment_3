@@ -64,7 +64,7 @@ li a:hover {
   font-family: 'Bona Nova';font-size: 22px;
     background-color: #9EF5F5;
     font-family: 'Bona Nova';font-size: 22px;
-      background-image: url('images/compute-ea4c57a4.png');
+    background-image: url('public/images/compute-ea4c57a4.png');
 }
 
   .container
@@ -135,7 +135,7 @@ margin-left: 70px;
 /* Registration Page */
 .bodyregister {
   font-family: 'Bona Nova';font-size: 22px;
-    background-image: url('images/compute-ea4c57a4.png');
+    background-image: url('public/images/compute-ea4c57a4.png');
 
 }
 

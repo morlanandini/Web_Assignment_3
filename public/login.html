@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <head>
   <link href='https://fonts.googleapis.com/css?family=Bona Nova' rel='stylesheet'>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
 </head>
 <title>Login </title>
 
-<body class="bodylogin">
+<body class="bodylogin" style="background-image: url('images/compute-ea4c57a4.png')">
   <ul>
     <li><a href="home.html">Home</a></li>
 
@@ -16,10 +16,39 @@
   <li><a href="note.html">Create Note</a></li>
 </ul>
 <section class="flex1">
+  <br>
+  <br>
+  <button type="button" name="button" id='user-button' class="signupbutton">Get users </button>
+
+  <table id="calculation" style="color:white" border="1px">
+  <th>
+    <tr>
+      <td>UserId</td>
+      <td>emailId</td>
+      <td>firstname</td>
+      <td>lastname</td>
+      <td>password</td>
+    </tr>
+  </th>
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+
+  </tr>
+  </table>
+
   <div class="container">
 
 
   <h3>Good to see you again</h3>
+  <!-- <div id="calculation"></div> -->
+  <!-- <ol id="calculation">
+<li>Users:</li>
+</ol> -->
+
+
+
   <form class="forms" action="note.html" method="post" id="loginform">
         <input type="email" name="" value="" placeholder="Your Email" size=50 id="email" required>
 
@@ -45,6 +74,7 @@
 </td>
   </tr>
 </table>
+
 
 
   </form>
