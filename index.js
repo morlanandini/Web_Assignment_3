@@ -3,6 +3,7 @@ const app=express();
 
 const userRoutes=require('./server/routes/user');
 const noteRoutes=require('./server/routes/note');
+app.use(express.json());
 
 app.use(function(req,res,next) {
   res.header("Access-Control-Allow-Origin","*");
