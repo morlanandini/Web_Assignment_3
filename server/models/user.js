@@ -30,7 +30,7 @@ async function getAllUsers() {
    console.log(users)
 }
 
-getAllUsers();
+//getAllUsers();
 
 async function getUser(userName) {
   let sql = `

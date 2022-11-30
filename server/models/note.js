@@ -20,6 +20,8 @@ async function getAllNotes() {
 }
 
 getAllNotes();
+updateNote(1,'hello doremon');
+
 
 async function getNote(noteId) {
   let sql = `
@@ -39,12 +41,11 @@ async function deleteNote(noteID) {
   return await con.query(sql);
 }
 
-// updateNote(1001,'Jimmy')
-// deleteUser(1001)
+deleteNote(1);
 
 async function updateNote(noteID, noteContent) {
   let sql = `
-    UPDATE users SET noteContent = "${noteContent}"
+    UPDATE notes SET noteContent = "${noteContent}"
       WHERE noteID = "${noteID}"
   `;
 
