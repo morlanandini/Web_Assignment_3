@@ -6,44 +6,17 @@ router.get('/', async(req,res)=> {
   try {
     console.log("hi");
     const users = await User.getAllUsers();
-    // res.send(users);
-    res.json(users);
-
+    res.send(users);
   }
   catch(err) {
     res.json({ error: err.message || err.toString() });
   }
-}
-
-);
-
-
-
-router.get('/getusers/', async(req,res)=> {
-  try {
-
-    const users = await User.getAllUsers();
-    res.send(users);
-
-  }
-  catch(err){
-    res.status(401).send({message: 'error'});
-  }
-}
-
-)
-
-.post('/login', async (req, res) => {
-  try {
-    let user = await User.login(req.body);
-    res.send({...user, password: undefined})
-  } catch(err) {
-    res.status(401).send({message: err.message});
-  }
 })
 
-.post('/register', async (req, res) => {
+router.post('/register', async (req, res) => {
   try {
+    console.log(req.body[0]);
+    console.log(req.params);
     let user = await User.register(req.body);
     res.send({...user, password: undefined})
   } catch(err) {
@@ -51,7 +24,19 @@ router.get('/getusers/', async(req,res)=> {
   }
 })
 
-.post('/delete', async (req, res) => {
+router.post('/login', async (req, res) => {
+  try {
+    let user = await User.login(req.body);
+    res.send({...user, password: undefined})
+  } catch(err) {
+    console.log('hiiiiiii');
+
+    res.status(401).send({message: err.message});
+  }
+})
+
+
+router.post('/delete', async (req, res) => {
   try {
     let user = await User.deleteUser(req.body);
     res.send({...user, password: undefined})
@@ -60,7 +45,7 @@ router.get('/getusers/', async(req,res)=> {
   }
 })
 
-.post('/update', async (req, res) => {
+router.post('/update', async (req, res) => {
   try {
     let user = await User.updateUser(req.body);
     res.send({...user, password: undefined})
