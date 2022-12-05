@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/', async(req,res)=> {
   try {
-    console.log("hi");
+    // console.log("hi");
     const users = await User.getAllUsers();
     res.send(users);
   }
@@ -15,7 +15,7 @@ router.get('/', async(req,res)=> {
 
 router.post('/register', async (req, res) => {
   try {
-    console.log(req.body[0]);
+    console.log(req.body);
     console.log(req.params);
     let user = await User.register(req.body);
     res.send({...user, password: undefined})
@@ -36,7 +36,7 @@ router.post('/login', async (req, res) => {
 })
 
 
-router.post('/delete', async (req, res) => {
+router.delete('/delete', async (req, res) => {
   try {
     let user = await User.deleteUser(req.body);
     res.send({...user, password: undefined})
@@ -45,7 +45,7 @@ router.post('/delete', async (req, res) => {
   }
 })
 
-router.post('/update', async (req, res) => {
+router.put('/update', async (req, res) => {
   try {
     let user = await User.updateUser(req.body);
     res.send({...user, password: undefined})

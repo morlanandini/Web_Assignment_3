@@ -24,7 +24,7 @@ router.post('/create', async (req, res) => {
 })
 
 
-router.post('/delete', async (req, res) => {
+router.delete('/delete', async (req, res) => {
   try {
     let note = await Note.deleteNote(req.body);
     res.send(note);
@@ -33,7 +33,7 @@ router.post('/delete', async (req, res) => {
   }
 })
 
-router.post('/update', async (req, res) => {
+router.put('/update', async (req, res) => {
   try {
     let note = await Note.updateNote(req.body);
     res.send(note)

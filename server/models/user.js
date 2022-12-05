@@ -31,6 +31,7 @@ async function register(user) {
 async function getAllUsers() {
    const sql = `SELECT * FROM users;`;
    let users = await con.query(sql);
+   console.log(users);
    return await con.query(sql);
 }
 
@@ -74,8 +75,8 @@ async function updateUser(user) {
 
 
 async function login(user) {
-  console.log(user.firstName); // {userName: "sda", password: "gsdhjsga"}
-  let cUser = await getUser(user.userID); //[{userName: "cathy123", password: "icecream"}]
+  //console.log(user.firstName); 
+  let cUser = await getUser(user.userID); 
 
   if(!cUser[0]) throw Error("User not found");
   if(cUser[0].password !== user.password) throw Error("Password incorrect");
