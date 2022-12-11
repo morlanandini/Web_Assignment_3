@@ -15,17 +15,20 @@ router.get('/', async(req,res)=> {
 
 router.post('/register', async (req, res) => {
   try {
-    console.log(req.body);
-    console.log(req.params);
+    // console.log('in routes user');
+    // console.log(req.body);
+
     let user = await User.register(req.body);
     res.send({...user, password: undefined})
   } catch(err) {
+    console.log(err.message);
     res.status(401).send({message: err.message});
   }
 })
 
 router.post('/login', async (req, res) => {
   try {
+   // console.log('hi');
     let user = await User.login(req.body);
     res.send({...user, password: undefined})
   } catch(err) {

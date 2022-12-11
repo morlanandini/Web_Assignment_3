@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
   <head>
     <link href='https://fonts.googleapis.com/css?family=Bona Nova' rel='stylesheet'>
@@ -9,16 +7,16 @@
   </head>
   <title>Add Note</title>
   <body  class="bb">
-  <ul>
+    <nav></nav>
+  <!-- <ul>
       <li><a href="home.html">Home</a></li>
   <li><a href="register.html">SignUp</a></li>
   <li><a href="login.html">SignIn</a></li>
   <li><a href="note.html">Create Note</a></li>
-</ul>
+</ul> -->
   <br>
   <h3  class="heading">Create Your Note Here</h3>
-  <!-- <div id="calculation" style="color:white"></div> -->
-  <table id="calculation" style="color:white" border="1px">
+  <!-- <table id="calculation" style="color:white" border="1px">
   <th>
     <tr>
       <td>UserId</td>
@@ -33,20 +31,44 @@
   <tr>
 
   </tr>
-  </table>
+  </table> -->
+  <p class="getnotes" style="color: white;">hi</p>
 
 
   <form class="" action="" method="post" id=noteform>
 
     <textarea type="text" class="textarea1"  placeholder="Start writing here..." id="notetext" ></textarea>
     <br><br>
-    <input type="submit" name="" size="150" class="create" value="Create Note" onclick="alert('Note Created Sucessfully')">
-    <button type="button" name="button" id='note-button' size="150" class="create">Get notes </button>
+    <input type="submit" name="" size="150" class="create" value="Create Note" onClick="window.location.reload(true)">
+    <!-- <button type="button" name="button" id='note-button' size="150" class="create">Get notes </button> -->
 
   </form>
+<script type="module">
+  import { fetchData, setCurrentUser, getCurrentUser } from '/scripts/main.js'
 
-<script type="text/javascript" src="myscript.js">
+  function getnote()
+  {
+    let noteobj=getCurrentUser();
+    let note=noteobj.emailId;
+    fetchData("note/getnotes", noteobj, "POST")
+  // .then((res) => res.json())
+    .then((res) => {
+      let p = document.querySelector('.getnotes');
+      // myobj = JSON.stringify(res);
+       p.innerHTML=JSON.stringify(res);
+    })
+    .catch((err) => {
+      let p = document.querySelector('.error');
+      p.innerHTML = err.message;
+    }) 
+  }
+  document.getElementById("getnotes").innerHTML = getnote();
 
 </script>
+
+  <script type="module" src="scripts/myscript.js" charset="utf-8"></script>
+  <script type="module" src="scripts/main.js" charset="utf-8"></script>
+
+
   </body>
 </html>

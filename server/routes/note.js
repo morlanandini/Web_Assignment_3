@@ -2,10 +2,22 @@ const express = require('express');
 const Note = require('../models/note');
 const router = express.Router();
 
-router.get('/', async(req,res)=> {
+router.post('/', async(req,res)=> {
   try {
 
-    const note =await Note.getAllNotes();
+    const note =await Note.getAllNotes(req.body);
+    res.json(note);
+
+  }
+  catch(err){
+    res.status(401).send({message: 'error in note'});
+  }
+})
+
+router.post('/getnotes', async(req,res)=> {
+  try {
+     // console.log("in getnotes router");
+    const note =await Note.getNote(req.body);
     res.json(note);
 
   }
@@ -16,6 +28,7 @@ router.get('/', async(req,res)=> {
 
 router.post('/create', async (req, res) => {
   try {
+   // console.log('in create note route');
     let note = await Note.CreateNote(req.body);
     res.send(note);
   } catch(err) {
