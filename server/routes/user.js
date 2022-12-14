@@ -32,7 +32,7 @@ router.post('/login', async (req, res) => {
     let user = await User.login(req.body);
     res.send({...user, password: undefined})
   } catch(err) {
-    console.log('hiiiiiii');
+    // console.log('hiiiiiii');
 
     res.status(401).send({message: err.message});
   }

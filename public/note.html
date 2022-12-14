@@ -15,24 +15,13 @@
   <li><a href="note.html">Create Note</a></li>
 </ul> -->
   <br>
+  <table class="table" id="tab" style="color:white" border="1px">
+    <th><tr><td>Notes Created by You</td></tr></th>
+  
+   
+  </table>
+  <!-- <p class="getnotes" style="color: white;">hi</p> -->
   <h3  class="heading">Create Your Note Here</h3>
-  <!-- <table id="calculation" style="color:white" border="1px">
-  <th>
-    <tr>
-      <td>UserId</td>
-      <td>emailId</td>
-      <td>NoteId</td>
-      <td>Content</td>
-    </tr>
-  </th>
-  <tr>
-    <td></td>
-  </tr>
-  <tr>
-
-  </tr>
-  </table> -->
-  <p class="getnotes" style="color: white;">hi</p>
 
 
   <form class="" action="" method="post" id=noteform>
@@ -53,16 +42,42 @@
     fetchData("note/getnotes", noteobj, "POST")
   // .then((res) => res.json())
     .then((res) => {
-      let p = document.querySelector('.getnotes');
-      // myobj = JSON.stringify(res);
-       p.innerHTML=JSON.stringify(res);
-    })
-    .catch((err) => {
-      let p = document.querySelector('.error');
-      p.innerHTML = err.message;
-    }) 
+      let table=document.getElementById("tab");
+    res.forEach((user) => {
+      let newNode=document.createElement('tr');
+   let childNode0=document.createElement('td');
+ 
+ 
+   let text2=document.createTextNode(user.noteContent);
+   childNode0.appendChild(text2);
+
+   newNode.appendChild(childNode0);
+
+   table.appendChild(newNode);
   }
-  document.getElementById("getnotes").innerHTML = getnote();
+   
+
+   
+    
+      // let p = document.querySelector('.getnotes');
+      // // myobj = JSON.stringify(res);
+      // for(let i=0;i<res.length;i++)
+      // {
+      //   p.innerHTML+=JSON.stringify(res[i].noteContent);
+
+      // }
+    )})
+
+
+
+
+    .catch((err)=>console.log(`Error! ${err}`));
+    // .catch((err) => {
+    //   let p = document.querySelector('.error');
+    //   p.innerHTML = err.message;
+    // }) 
+  }
+  document.getElementById("table").innerHTML = getnote();
 
 </script>
 

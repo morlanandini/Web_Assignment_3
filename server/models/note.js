@@ -37,7 +37,7 @@ async function CreateNote(note){
 
 
 async function getNote(note) {
-  console.log("in getnotes");
+  // console.log("in getnotes");
   let sql = `
     SELECT noteContent FROM notes
       WHERE emailId = "${note.emailId}"
